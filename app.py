@@ -3,10 +3,12 @@ from flask import Flask
 app = Flask(__ToDoList__)
 @app.route('/')
 
-tasks = []
+
 print("To-Do List")
  
 while True:
+ 
+ tasks = []
 
   i=0
   i=i+1
