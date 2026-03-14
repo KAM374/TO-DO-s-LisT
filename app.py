@@ -1,11 +1,16 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route('/')
-def todo_list():
-    return "To-Do List"
 tasks = []
 running = True 
+
+@app.route('/')
+def todo_list():
+    result = "To-Do List<br>"
+    for i, task in enumerate(tasks, 1):
+        result += str(i) + ". " + task + "<br>"
+    return result
+
 
 while running:
     i=0
@@ -26,9 +31,8 @@ while running:
         
     elif  action == "quit":
         running = False
-        print(task)
         print("Your To-Do List")
-        
+        print(tasks)
         
 
 if __name__ == '__main__':
