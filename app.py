@@ -10,7 +10,7 @@ running = True
 while running:
     i=0
     i=i+1
-    action = input("Type 'add', 'delete', 'show': ")
+    action = input("Type 'add', 'delete', 'show', 'quit': ")
 
     if action == "add":
         task = input("enter a task: ")
@@ -24,7 +24,7 @@ while running:
     elif  action == "show":
         print("Your To-Do List \n",  tasks)
 
-   elif  action == "quit":
+    elif  action == "quit":
         running = False
         
 
